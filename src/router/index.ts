@@ -1,4 +1,4 @@
-import { createRouter, createWebHistory } from 'vue-router';
+import { createRouter, createWebHashHistory } from 'vue-router';
 import Home from '../views/Home.vue';
 import Login from '../views/Login.vue';
 import NotFound from '../views/NotFound.vue';
@@ -22,7 +22,7 @@ import DataAnalysisModule from '../views/modules/DataAnalysisModule.vue';
 import ServerManagementModule from '../views/modules/ServerManagementModule.vue';
 
 const router = createRouter({
-  history: createWebHistory(),
+  history: createWebHashHistory('/shiny-FPS/'),
   routes: [
     {
       path: '/',
