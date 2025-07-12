@@ -1,0 +1,94 @@
+@import url('./dark-theme.css');
+
+/* Global CSS Variables */
+:root {
+  --header-height: 60px;
+  --sidebar-width: 200px;
+  --content-padding: 20px;
+  --gap-sm: 8px;
+  --gap-md: 16px;
+  --gap-lg: 24px;
+}
+
+/* Base styles */
+html, body {
+  font-family: 'Roboto', 'Helvetica Neue', Helvetica, 'PingFang SC', 'Hiragino Sans GB', 'Microsoft YaHei', Arial, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-size: 16px;
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  overflow: hidden;
+}
+
+#app {
+  height: 100%;
+}
+
+.flex-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.flex-between {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.flex-column {
+  display: flex;
+  flex-direction: column;
+}
+
+/* Common card style */
+.app-card {
+  background-color: var(--darker-bg);
+  border-radius: 4px;
+  box-shadow: 0 2px 12px 0 var(--shadow-color);
+  padding: var(--gap-md);
+  margin-bottom: var(--gap-md);
+}
+
+/* 枪战游戏风格元素 */
+.fps-title {
+  font-family: 'Orbitron', 'Roboto', sans-serif;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  position: relative;
+}
+
+.fps-title::after {
+  content: '';
+  position: absolute;
+  bottom: -5px;
+  left: 0;
+  width: 40px;
+  height: 3px;
+  background-color: var(--primary-color);
+}
+
+.fps-card {
+  border: 1px solid var(--gold-border);
+  background-color: var(--darker-bg);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+  border-radius: 4px;
+  overflow: hidden;
+  transition: all 0.3s ease;
+}
+
+.fps-card:hover {
+  box-shadow: 0 8px 20px var(--gold-shadow);
+  transform: translateY(-3px);
+}
+
+.fps-gradient-bg {
+  background: linear-gradient(135deg, var(--darker-bg) 0%, var(--darkest-bg) 100%);
+}
+
+.fps-text-glow {
+  text-shadow: 0 0 5px var(--gold-shadow);
+  color: var(--primary-color);
+} 
